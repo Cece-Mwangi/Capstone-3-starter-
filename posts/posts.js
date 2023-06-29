@@ -21,12 +21,14 @@ async function displayPosts() {
 
   return data.forEach((post) => {
     const postDate = new Date(post.createdAt);
+    const rn = postDate.toDateString();
+    const time = postDate.toLocaleTimeString();
     const postContent = `
          <li class="post">
             <div class="postDetails">
               <strong class="author">${post.username}</strong>
               <p class="postText">${post.text}</p>
-              <small class="timestamp">${postDate.toDateString()}</small>
+              <small class="timestamp">${rn}, ${time}</small>
               <i class="bi bi-heart"></i>
             </div>
           </li>`;

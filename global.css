@@ -23,7 +23,7 @@
 }
 
 .btn-primary {
-    background-color: #528AAE;
+  background-color: #528aae;
 }
 
 .btn-primary:hover {
@@ -33,7 +33,6 @@ a {
   text-decoration: none;
 }
 
-body{
-    background-color: #FBF9F6;
-
+body {
+  background-color: #fbf9f6;
 }
