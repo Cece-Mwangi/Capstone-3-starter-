@@ -21,3 +21,10 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+.btn-primary {
+    background-color: #528AAE;
+}
+
+.btn-primary:hover {
+    background-color: #2E5984;
+}
