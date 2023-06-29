@@ -8,6 +8,8 @@ logoutBtn.addEventListener("click", () => {
   logout();
 });
 
+const url = `https://microbloglite.herokuapp.com/api/posts`
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -33,6 +35,7 @@ form.addEventListener("submit", (e) => {
   if (isLoggedIn()) {
     makeNewPost();
   }
+  location.href="/posts"
 });
 
 logoutBtn.addEventListener('click', () => {

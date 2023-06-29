@@ -24,7 +24,7 @@
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="./landing.css" />
 
-    <title>Login to the Microblog Network!</title>
+    <title>Login to BlogBridge!</title>
 
     <!-- Run BEFORE page is finished loading (before window.onload - don't add the `defer` attribute): -->
     <script src="./auth.js"></script>
@@ -34,26 +34,34 @@
   </head>
   <body>
     <header>
-      <h1>Welcome to <code>YOUR MICROBLOG NETWORK</code></h1>
+      <h1 style=text-align:center>Welcome to <code>BLOGBRIDGE </code></h1>
       <div class="navbar navbar-expand-lg" style="background-color: #c4bebe">
         <a href="/Registration/index.html" class="nav-item nav-link">Sign Up</a>
       </div>
     </header>
-
     <main>
-      <form id="login">
-        <div>
-          <label for="username">Username</label>
-          <input type="text" id="username" minlength="3" />
-        </div>
+      <div class="main-section">
+      <div class="about-section">
+        <h1>About Us</h1>
+        <p>Blogbridge is a free website meant for users to connect and socialize through posts. </p>
+        <p>Visitors can sign up to become users of Blogbridge, giving them access to view posts from other users and the ability to edit their own user information on the platform.</p>
+      </div><br>
+      <h2 style="text-align:left">Sign In</h2>
+      <div class="main-section">
+        <form id="login">
+          <div class="form-outline mb-4">
+            <label for="username">Username</label>
+            <input type="text" id="username" minlength="3" />
+          </div>
 
-        <div>
-          <label for="password">Password</label>
-          <input type="password" id="password" minlength="6" />
-        </div>
+          <div class="form-outline mb-4">
+            <label for="password">Password</label>
+            <input type="password" id="password" minlength="6" />
+          </div>
 
-        <button id="loginButton" type="submit">Login</button>
-      </form>
+          <button class="btn btn-primary btn-block" id="loginButton" type="submit">Login</button>
+        </form>
+      </div>
     </main>
 
     <footer></footer>

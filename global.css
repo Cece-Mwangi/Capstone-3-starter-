@@ -22,10 +22,18 @@
   justify-content: space-around;
 }
 
+.btn-primary {
+    background-color: #528AAE;
+}
+
+.btn-primary:hover {
+    background-color: #2E5984;
+
 a {
   text-decoration: none;
 }
 
 body{
     background-color: #FBF9F6;
+
 }
