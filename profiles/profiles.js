@@ -1,9 +1,6 @@
 const form = document.querySelector("form");
 const postArea = document.getElementById("newContent");
 
-
-const url = `https://microbloglite.herokuapp.com/api/posts`;
-
 logoutBtn.addEventListener("click", () => {
   logout();
 });
@@ -25,32 +22,25 @@ form.addEventListener("submit", (e) => {
         Authorization: `Bearer ${authData.token}`,
       },
     };
-    const res = await fetch(url, options);
+    const res = await fetch(apiBaseURL + `/api/posts`, options);
     const data = await res.json();
+    window.location.assign("/posts");
     return data;
   }
 
   if (isLoggedIn()) {
     makeNewPost();
   }
-  location.href="/posts"
 });
-
-logoutBtn.addEventListener('click', () => {
-  logout()
-})
 
 //--------------Retrieving users existing login Info----------------------
 
-
-let currentUsername = document.getElementById('currentUsername')
+let currentUsername = document.getElementById("currentUsername");
 
 const authData = getLoginData();
 currentUsername.innerHTML = authData.username;
 
 //^^^--https://blog.logrocket.com/localstorage-javascript-complete-guide/
-
-
 
 ////-----------update user info -------------------
 
@@ -58,34 +48,34 @@ const passWord = document.getElementById("password");
 const fullName = document.getElementById("fullName");
 const bioText = document.getElementById("bioText");
 
-const updateForm = document.getElementById('updateUser')
+const updateForm = document.getElementById("updateUser");
 
-updateForm.addEventListener('submit', (e) => {
-
-  e.preventDefault()
+updateForm.addEventListener("submit", (e) => {
+  e.preventDefault();
   const updatedBody = {
     password: passWord.value,
     bio: bioText.value,
-    fullName: fullName.value
-  }
-  
+    fullName: fullName.value,
+  };
+
   fetch(apiBaseURL + `/api/users/${authData.username}`, {
     method: "PUT",
     body: JSON.stringify(updatedBody),
     headers: {
       "Content-Type": "application/json; charset=UTF-8",
-      Authorization: `Bearer ${authData.token}`
-    }
+      Authorization: `Bearer ${authData.token}`,
+    },
   })
     .then((response) => response.json())
-    .then(updatedBody => 
-      { console.log(updatedBody)
-      if (confirm('Successful Update')) {
-        let confirmationMessage =
-          document.getElementById('confirmationMessage');
-        confirmationMessage.innerHTML =  "**User information updated**"
+    .then((updatedBody) => {
+      console.log(updatedBody);
+      if (confirm("Successful Update")) {
+        let confirmationMessage = document.getElementById(
+          "confirmationMessage"
+        );
+        confirmationMessage.innerHTML = "**User information updated**";
       }
-    })
-})
+    });
+});
 
 // https://stackoverflow.com/questions/51444615/javascript-change-password-by-using-an-input

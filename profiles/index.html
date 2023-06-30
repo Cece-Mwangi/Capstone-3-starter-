@@ -45,11 +45,13 @@
           <button class="btn btn-outline-danger" id="logoutBtn">Logout</button>
       </div>
     </header>
+    <br>
     <main>
       <div class="main-section">
         <form class="form">
           <p>Speak Your Mind</p>
           <textarea
+          style="margin-bottom: 1rem;"
             class="form-control"
             id="newContent"
             placeholder="New Post"
@@ -57,16 +59,26 @@
           <button class="btn btn-primary" type="submit" id="createBtn">
             Create post
           </button>
+
         </form><br>
           <h3 style=text-align:center; id="currentUsername"></h3><br>
         <form id="updateUser" class="form">
           <p>
             <h5>Update Profile:</h5><br>
             <input type="text" id="password" class="form-control" placeholder="Enter new Password"><br>
-          </p>
+        <br>
+          <h3 style="text-align:center;" id="currentUsername"></h3><br>
+        <form id="updateUser">
           <p>
-            <input type="text"class="form-control" id="fullName" placeholder="Enter new Full Name"><br>
+            <label style="display: flex;" for="updateUser">Update Profile:</label><br>
+            <input type="text" id="password" class="form-control" placeholder="Enter new Password">
+
           </p>
+          <br>
+          <p>
+            <input type="text" class="form-control" id="fullName" placeholder="Enter new Full Name">
+          </p>
+          <br>
           <p>
             <textarea id="bioText" class="form-control" placeholder="Enter new Bio"></textarea>
           </p>
@@ -77,6 +89,6 @@
       </div>
     </main>
     <footer></footer>
-    <script src="/profiles/profiles.js"></script>
+    <script src="./profiles.js"></script>
   </body>
 </html>
