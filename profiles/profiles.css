@@ -1,3 +1,7 @@
+h1 {
+    text-align: center;
+    font-style: oblique;
+}
 .main-section {
     flex-direction: column;
     align-items: center;
@@ -5,3 +9,10 @@
     padding-left: 5%;
     padding-right: 5%;
 }
+.form {
+    background-color: #FBF9F6;
+    display: block;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* Refernces for box-shadow-^^https: //www.cssportal.com/css3-box-shadow/^^ */
