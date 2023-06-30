@@ -33,6 +33,10 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: #fbf9f6;
+
+body{
+    background-color: #FBF9F6;
+
 }
+code {
+  color: #2E5984;}

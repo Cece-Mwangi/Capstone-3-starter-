@@ -34,21 +34,38 @@
   </head>
   <body>
     <header>
-      <h1 style=text-align:center>Welcome to <code>BLOGBRIDGE </code></h1>
+      <h1 style="text-align: center">Welcome to <code>BLOGBRIDGE </code></h1>
       <div class="navbar navbar-expand-lg" style="background-color: #c4bebe">
-        <a href="/Registration/index.html" class="nav-item nav-link">Sign Up</a>
+        <button>
+          <a href="/Registration/index.html" id="linkPosts">Sign Up</a>
+        </button>
       </div>
     </header>
     <main>
       <div class="main-section">
-      <div class="about-section">
-        <h1>About Us</h1>
-        <p>Blogbridge is a free website meant for users to connect and socialize through posts. </p>
-        <p>Visitors can sign up to become users of Blogbridge, giving them access to view posts from other users and the ability to edit their own user information on the platform.</p>
-      </div><br>
-      <h2 style="text-align:left">Sign In</h2>
-      <div class="main-section">
-        <form id="login">
+        <div class="about-section">
+          <h2>What is BlogBridge?</h2>
+          <p>
+            Blogbridge is a interactive website meant to bring people together
+            through their unique presepctives. It serves as a open platform
+            where users can freely express themselves by posting about any topic
+            they desire. With its diverse community and limitless possibilities,
+            BlogBridge is sure to create a delightful and engaging experience
+            for everyone.
+          </p>
+          <h5>What is there to do?</h5>
+          <p>
+            Visit the home page to see all post uploaded to BlogBridge from
+            other users.
+          </p>
+          <p>
+            Visit the Account page to create a new post and update user
+            information.
+          </p>
+        </div>
+        <br />
+        <form id="login" class="form">
+          <p class="form-title">Sign in to your account</p>
           <div class="form-outline mb-4">
             <label for="username">Username</label>
             <input type="text" id="username" minlength="3" />
@@ -59,7 +76,13 @@
             <input type="password" id="password" minlength="6" />
           </div>
 
-          <button class="btn btn-primary btn-block" id="loginButton" type="submit">Login</button>
+          <button
+            class="btn btn-primary btn-block"
+            id="loginButton"
+            type="submit"
+          >
+            Login
+          </button>
         </form>
       </div>
     </main>

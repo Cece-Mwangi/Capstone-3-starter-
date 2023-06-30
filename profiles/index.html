@@ -36,10 +36,11 @@
   <body>
     <header>
       <div>
-        <h1>Profile Page </h1>
-        <div class="navbar navbar-expand-lg" style="background-color: #c4bebe">
+        <h1>PROFILE</h1>
+        <div class="navbar navbar-expand-lg" style="background-color: #d5cdcd">
+           <div class="text-right"><code>BLOGBRIDGE</code></div>
           <a href="/posts/index.html">Home</a>
-          <a href="/profiles/index.html">Profile</a>
+          <a href="/profiles/index.html">Account</a>
           <a href="/Registration/index.html" class="nav-link disabled">Sign Up</a>
           <button class="btn btn-outline-danger" id="logoutBtn">Logout</button>
       </div>
@@ -47,23 +48,31 @@
     <br>
     <main>
       <div class="main-section">
-        <form>
+        <form class="form">
+          <p>Speak Your Mind</p>
           <textarea
           style="margin-bottom: 1rem;"
             class="form-control"
             id="newContent"
             placeholder="New Post"
-          ></textarea>
+          ></textarea><br>
           <button class="btn btn-primary" type="submit" id="createBtn">
             Create post
           </button>
-        </form>
+
+        </form><br>
+          <h3 style=text-align:center; id="currentUsername"></h3><br>
+        <form id="updateUser" class="form">
+          <p>
+            <h5>Update Profile:</h5><br>
+            <input type="text" id="password" class="form-control" placeholder="Enter new Password"><br>
         <br>
           <h3 style="text-align:center;" id="currentUsername"></h3><br>
         <form id="updateUser">
           <p>
             <label style="display: flex;" for="updateUser">Update Profile:</label><br>
             <input type="text" id="password" class="form-control" placeholder="Enter new Password">
+
           </p>
           <br>
           <p>
@@ -73,7 +82,7 @@
           <p>
             <textarea id="bioText" class="form-control" placeholder="Enter new Bio"></textarea>
           </p>
-            <button class="btn btn-primary" id="updatetBtn">Update</button>
+            <button class="btn btn-primary" id="updatetBtn">submit</button>
             <p id="confirmationMessage">
           </p>
         </form>
